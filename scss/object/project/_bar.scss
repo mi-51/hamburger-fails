@@ -1,0 +1,19 @@
+.p-bar{
+    width: 100%;
+    background-color: #fff7ef;
+    text-align: right;
+    padding-right: 10px;
+    &__button{
+        color: #707070;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #fff7ef;
+        border: none;
+        line-height: 60px;
+        padding: 0;
+        @include sp{
+            font-size: 30px;
+        }
+    }
+}

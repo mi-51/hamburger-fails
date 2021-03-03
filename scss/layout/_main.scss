@@ -1,0 +1,43 @@
+.l-main{
+    display: flex;
+    &__left{
+        width: 80%;
+        height: 100%;
+        @include tab{
+            width: 100%;
+        };
+        &.is-open{ 
+            position: relative;
+            overflow-y: auto;
+        }
+    }
+    &__right{
+        width: 20%;
+        min-width: 260px;
+        background-color: #F2EDE9;
+        height: inherit;
+        @include pc{
+            margin-top: -200px;
+        };
+        @include tab{
+            display: none; 
+        };
+        &.is-open{
+            animation: SlideIn 0.5s;
+            display: block;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            z-index: 200;
+            right: 0;
+            width: 40%;
+            overflow-y: auto;
+            @include sp{
+                width: 80%;
+            }
+        }
+    }
+    &.is-open{
+        position: relative;
+    }
+}
